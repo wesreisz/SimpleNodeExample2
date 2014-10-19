@@ -24,6 +24,34 @@ block content
                 |  <span id='userInfoLocation'></span>
         // /USER INFO
 
+        // EDIT USER
+        #saveUser
+            h2 Edit User
+            fieldset
+                strong ID: 
+                |<span id='inputUserId'></span>
+                br
+                strong UserName: 
+                input#userInfoNameEdit(type='text')
+                br
+                strong Email: 
+                input#inputUserEmailEdit(type='text')
+                br
+                strong Full Name: 
+                input#inputUserFullnameEdit(type='text')
+                br
+                strong Age: 
+                input#userInfoAgeEdit(type='text')
+                br
+                strong Location: 
+                input#userInfoLocationEdit(type='text')
+                br
+                strong Gender: 
+                input#userInfoGenderEdit(type='text')
+                br
+                button#btnSaveUser Edit User
+        // /EDIT USER
+
         // USER LIST
         h2 User List
         #userList
@@ -31,13 +59,13 @@ block content
                 thead
                     th UserName
                     th Email
-                    th Delete?
+                    th Manage?
                 tbody
         // /USER LIST
 
         // ADD USER
-        h2 Add User
         #addUser
+            h2 Add User
             fieldset
                 input#inputUserName(type='text', placeholder='Username')
                 input#inputUserEmail(type='text', placeholder='Email')

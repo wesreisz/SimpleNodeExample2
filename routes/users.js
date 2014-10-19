@@ -24,6 +24,17 @@ router.post('/adduser', function(req, res) {
 });
 
 /*
+ * POST to edituser.
+ */
+router.post('/saveuser', function(req, res) {
+    var db = req.db;
+    db.collection('userlist').save(req.body, function(err, result){
+        res.send(
+            (err === null) ? { msg: '' } : { msg: err }
+        );
+    });
+});
+/*
  * DELETE to deleteuser.
  */
 router.delete('/deleteuser/:id', function(req, res) {
